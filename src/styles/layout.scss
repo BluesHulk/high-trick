@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+// 布局样式
+.float-container {
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+    zoom: 1;
+  }
+
+  .fixed-padding-top {
+    padding-top: 4px;
+  }
+
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+}
+
+// page布局
+.page-title-wrapper {
+  margin-bottom: 17px;
+  @extend .pl-30;
+  @extend .pr-30;
+  @extend .pt-30;
+}
+
+.page-title {
+  font-size: 20px;
+  font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+  font-weight: 500;
+  color: $--color-dark;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+  font-weight: 500;
+  color: $--color-dark;
+  line-height: 24px;
+}
+
+// tree箭头样式
+.el-tree-node__expand-icon,
+.v-tree-node-icon {
+  color: $-primary-color;
+  font-size: 16px;
+}
+.custom-tree-wrapper {
+  .el-tree-node__expand-icon {
+    @extend .v-tree-node-icon;
+    padding: 6px 10px;
+  }
+}
+
+// tree
+.page-tree-wrapper {
+  $--tree-import-height: 84px;
+
+  .tree-icon-edit,
+  .tree-icon-delete {
+    width: 16px;
+    display: inline-block;
+  }
+
+  .tree-icon-edit {
+    margin-right: 10px;
+    background: url(../assets/button/edit.png) center no-repeat;
+  }
+
+  .tree-icon-delete {
+    background: url(../assets/button/del.png) center no-repeat;
+  }
+
+  .node-count {
+    margin-left: 8px;
+    font-size: 12px;
+    font-family: 'SourceHanSansCN-Regular, SourceHanSansCN';
+    font-weight: 400;
+    //line-height: 18px;
+    color: $--color-username;
+  }
+
+  .el-tree-node.is-current {
+    > .el-tree-node__content {
+      background-color: $--bg-line-selected;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      .node-count {
+        color: $-primary-color;
+      }
+    }
+  }
+
+  .el-tree--highlight-current {
+    > .el-tree-node {
+      .el-tree-node__content {
+        height: 36px;
+        //font-size: 14px;
+        font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+        font-weight: 500;
+        color: $--color-dark;
+      }
+    }
+    .el-tree-node.is-current > {
+      .el-tree-node__content {
+        //background-color: transparent;
+
+        .custom-tree-node {
+          //padding-left: 20px;
+          //margin-left: -20px;
+          //background-color: $--bg-line-selected;
+        }
+
+        .tree-icon-edit {
+          background: url(../assets/button/edit-active.png) center no-repeat;
+        }
+
+        .tree-icon-delete {
+          background: url(../assets/button/del-active.png) center no-repeat;
+        }
+      }
+    }
+
+    .el-tree-node__content:hover {
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      .tree-icon-edit {
+        background: url(../assets/button/edit-active.png) center no-repeat;
+      }
+
+      .tree-icon-delete {
+        background: url(../assets/button/del-active.png) center no-repeat;
+      }
+    }
+
+    .el-tree-node__children {
+      > .el-tree-node {
+        .el-tree-node__children {
+          .is-current {
+            > .el-tree-node__content .custom-tree-node,
+            > .el-tree-node__label {
+              color: $-primary-color;
+            }
+
+            > .tree-icon-edit {
+              background: url(../assets/button/edit-active.png) center no-repeat;
+            }
+
+            > .tree-icon-delete {
+              background: url(../assets/button/del-active.png) center no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tree-head {
+    padding: 30px;
+  }
+
+  .tree-title {
+    margin-bottom: 6px;
+  }
+
+  //.el-tree-node__expand-icon {
+  //  color: $-primary-color;
+  //  font-size: 16px;
+  //  padding: 6px 10px;
+  //}
+
+  .el-tree-node__expand-icon.is-leaf {
+    color: transparent;
+  }
+
+  .el-tree-node__content {
+    height: 30px;
+    padding-right: 20px;
+  }
+
+  .custom-tree-node {
+    width: 100%;
+    //padding-right: 20px;
+    display: block;
+  }
+
+  .el-tree {
+    > .el-tree-node {
+      > .el-tree-node__content {
+        .custom-tree-node,
+        .el-tree-node__label {
+          //font-size: 16px;
+          font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+          font-weight: 500;
+          color: $--color-dark;
+          line-height: 36px;
+          height: 36px;
+        }
+
+        .custom-tree-node {
+          .tree-icon-edit,
+          .tree-icon-delete {
+            height: 36px;
+          }
+        }
+      }
+    }
+  }
+
+  .el-tree-node__children {
+    > .el-tree-node {
+      > .el-tree-node__content {
+        .custom-tree-node,
+        > .el-tree-node__label {
+          font-size: 14px;
+          font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+          font-weight: 500;
+          color: $--color-dark;
+          line-height: 32px;
+          height: 32px;
+        }
+
+        .custom-tree-node {
+          .tree-icon-edit,
+          .tree-icon-delete {
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .el-tree-node__children {
+    > .el-tree-node {
+      .el-tree-node__children {
+        .custom-tree-node,
+        .el-tree-node__label {
+          //font-size: 14px;
+          font-family: 'SourceHanSansCN-Regular, SourceHanSansCN';
+          font-weight: 400;
+          color: $--color-dark;
+          height: 30px;
+          line-height: 30px;
+        }
+
+        .custom-tree-node {
+          .tree-icon-edit,
+          .tree-icon-delete {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .tree-title {
+    height: 20px;
+  }
+
+  .tree-content-wrapper {
+    height: calc(100% - 102px);
+    //margin-bottom: $--tree-import-height;
+  }
+
+  // 树结构底部的样式
+  .has-import {
+    height: calc(100% - 200px);
+    margin-bottom: $--tree-import-height;
+  }
+
+  .tree-import {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $--tree-import-height;
+    line-height: $--tree-import-height;
+    font-size: 18px;
+    font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+    font-weight: 500;
+    color: $-primary-color;
+    background-color: $--bg-light;
+    letter-spacing: 2px;
+    .import {
+      text-align: right;
+      margin: 0 auto;
+      width: 127px;
+      height: $--tree-import-height - 1;
+      background: $--color-light url(../assets/tree-import.png) 0 center no-repeat;
+    }
+  }
+}
+
+// single-route-page
+.common-page-wrapper,
+.single-route-page {
+  position: relative;
+  background-color: $--color-light;
+  box-shadow: 0 10px 20px -4px rgba(16, 25, 74, 0.18);
+  border-radius: 6px;
+}

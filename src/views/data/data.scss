@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+.data-overview {
+  margin: 0 0.2rem;
+  height: calc(100vh - 1.1rem);
+  .data-title {
+    height: 0.2rem;
+    font-size: 0.2rem;
+    margin-top: 0.2rem;
+    text-shadow: 0.5px 0 0;
+  }
+  .view-row1 {
+    height: 1.72rem;
+    margin-top: 0.2rem;
+  }
+  .view-row2,
+  .view-row3 {
+    height: 2.7rem;
+    margin-top: 0.2rem;
+  }
+  .row1 {
+    height: 1.72rem;
+    border-radius: 0.12rem;
+    background: #fff;
+  }
+  .row2,
+  .row3 {
+    height: 2.7rem;
+    border-radius: 0.12rem;
+    background: #fff;
+  }
+  .view-col1-1 {
+    background: url('../../assets/data/row1-1.png') no-repeat 100% 100%;
+  }
+  .view-col1-2 {
+    background: url('../../assets/data/row1-2.png') no-repeat 100% 100%;
+  }
+  .view-col1-3 {
+    background: url('../../assets/data/row1-3.png') no-repeat 100% 100%;
+  }
+  .view-row3-3 {
+    height: 1.25rem;
+  }
+  .view-col3-3,
+  .view-col3-4 {
+    height: 1.25rem;
+    border-radius: 0.12rem;
+    background: #fff;
+  }
+  .view-col3-4 {
+    margin-top: 0.2rem;
+  }
+  // 标题
+  .col-title {
+    height: 0.36rem;
+    padding: 0 0.2rem;
+    overflow: hidden;
+    .left {
+      float: left;
+      font-size: 0.16rem;
+      line-height: 0.45rem;
+      text-shadow: 0.5px 0 0;
+      span {
+        font-size: 0.12rem;
+        color: rgb(199, 203, 219);
+        margin-left: 0.06rem;
+        text-shadow: 0 0 0;
+      }
+    }
+    .right {
+      float: right;
+      font-size: 0.16rem;
+      .fault-tip {
+        float: left;
+        font-size: 0.12rem;
+        line-height: 0.45rem;
+        .tip {
+          float: left;
+          margin-left: 0.1rem;
+          position: relative;
+          padding-left: 0.14rem;
+          span {
+            font-weight: bolder;
+            font-size: 0.25rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          .blue {
+            color: #3045b1;
+          }
+          .red {
+            color: #ff4807;
+          }
+          .green {
+            color: #00dcc3;
+          }
+          .yellow {
+            color: #ffbb00;
+          }
+          .green2 {
+            color: #6dd400;
+          }
+        }
+      }
+      .environment {
+        float: left;
+        font-size: 0.14rem;
+        line-height: 0.45rem;
+        margin-right: 0.5rem;
+        span {
+          color: #c6cada;
+          margin: 0 0.15rem;
+          cursor: pointer;
+        }
+        span.active {
+          color: #333;
+          border-bottom: 2px solid #3045b1;
+        }
+      }
+    }
+  }
+  .col-box {
+    height: calc(100% - 0.36rem);
+    color: #fff;
+    margin: 0 0.3rem 0 0.55rem;
+    .circle {
+      width: 0.96rem;
+      height: 0.96rem;
+      // border: 6rem solid #fff;
+      border-radius: 50%;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .float-right {
+      font-size: 0.16rem;
+    }
+    .right-num {
+      margin: 0.35rem 0 0.12rem 0;
+      font-size: 0.18rem;
+      text-align: right;
+      span {
+        font-size: 0.34rem;
+        margin-right: 0.05rem;
+      }
+    }
+  }
+  .col-box2 {
+    height: calc(100% - 0.36rem);
+    margin: 0 0.2rem;
+    .colImg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .car-num {
+      background: url('../../assets/data/car.png') no-repeat top left;
+      height: 0.3rem;
+      line-height: 0.3rem;
+      font-size: 0.16rem;
+      color: #3045b1;
+      margin-top: 0.35rem;
+      padding-left: 0.45rem;
+      overflow: hidden;
+      span {
+        font-size: 0.16rem;
+      }
+      .tip {
+        color: #c6cada;
+      }
+      .num {
+        font-size: 0.34rem;
+        letter-spacing: 0.15rem;
+        text-shadow: 1px 0 0;
+      }
+    }
+    .car-tip {
+      margin-top: 0.4rem;
+      .tip {
+        width: calc(50% - 0.2rem);
+        overflow: hidden;
+        font-size: 0.14rem;
+        height: 0.2rem;
+        line-height: 0.2rem;
+        padding-left: 0.2rem;
+        position: relative;
+        span {
+          font-weight: bolder;
+          font-size: 0.3rem;
+          position: absolute;
+          left: 0;
+          top: -0.02rem;
+        }
+        .red {
+          color: #ff4807;
+        }
+        .green {
+          color: #00dcc3;
+        }
+        .blue {
+          color: #3045b1;
+          font-weight: normal;
+          letter-spacing: -0.5px;
+        }
+      }
+    }
+    .count {
+      margin-top: 0.4rem;
+      .count-l {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        // background: #ff4807;
+        position: relative;
+        .count-l-num {
+          position: absolute;
+          text-align: center;
+          font-size: 0.14rem;
+          line-height: 20px;
+          color: #c6cada;
+          top: 0.5rem;
+          width: 1.5rem;
+          span {
+            font-size: 0.18rem;
+            color: #3045b1;
+          }
+        }
+      }
+      .count-r {
+        width: 1.85rem;
+        height: 0.5rem;
+        font-size: 0.14rem;
+        line-height: 0.5rem;
+        position: relative;
+        overflow: hidden;
+        padding-left: 0.2rem;
+        span {
+          font-weight: bolder;
+          font-size: 0.3rem;
+          position: absolute;
+          left: 0;
+          top: -0.02rem;
+        }
+        b {
+          font-weight: normal;
+          float: right;
+          font-size: 0.13rem;
+          letter-spacing: -0.01rem;
+          i {
+            font-style: normal;
+            font-size: 0.23rem;
+            margin-left: 0.15rem;
+            letter-spacing: -0.01rem;
+          }
+        }
+        .red {
+          color: #ff4807;
+        }
+        .green {
+          color: #00dcc3;
+        }
+        .blue {
+          color: #3045b1;
+        }
+      }
+    }
+  }
+  // 能耗
+  .ener-box {
+    height: 0.44rem;
+    line-height: 0.44rem;
+    font-size: 0.14rem;
+    padding: 0rem 0.2rem;
+    .ener-left {
+      width: 0.5rem;
+    }
+    .ener-center {
+      width: calc(100% - 1.6rem);
+      margin-top: 0.18rem;
+      .process {
+        position: relative;
+        width: 100%;
+        height: 0.08rem;
+        background: #eff4ff;
+        border-radius: 0.04rem;
+        i {
+          position: absolute;
+          height: 0.08rem;
+          border-radius: 0.04rem;
+        }
+        i.pcs1 {
+          background: #ff4807;
+        }
+        i.pcs2 {
+          background: #00dcc3;
+        }
+        i.pcs3 {
+          background: #3045b1;
+        }
+      }
+    }
+    .ener-right {
+      width: 1.1rem;
+      text-align: right;
+      color: #3045b1;
+      .unit {
+        font-size: 0.12rem;
+        color: #c6cada;
+        margin-left: 0.1rem;
+      }
+      .percent {
+        font-size: 0.24rem;
+        margin-left: 0.2rem;
+        text-shadow: 0.5px 0 0;
+      }
+    }
+  }
+  .col-box2-img {
+    height: calc(100% - 0.66rem);
+    margin: 0.2rem 0.2rem 0.1rem 0.2rem;
+  }
+}
+
+// 日期控件
+.el-date-editor {
+  margin-top: 0.1rem;
+  width: 1.35rem !important;
+  .el-input__prefix {
+    color: #fff;
+    .el-input__icon {
+      font-size: 0.16rem;
+      line-height: 0.25rem;
+    }
+    .el-icon-date:before {
+      padding: 0.04rem 0.03rem 0.04rem 0.04rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 0.02rem;
+    }
+  }
+  .el-input__suffix {
+    background: url('../../assets/data/down.png') no-repeat center;
+    width: 0.16rem;
+    .el-icon-circle-close {
+      display: none;
+    }
+    .el-input__icon {
+      line-height: 0.25rem;
+    }
+  }
+  .el-input__inner {
+    padding-left: 0.36rem;
+    padding-right: 0.1rem;
+    height: 0.25rem;
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 0.14rem;
+  }
+}
+.date-dark {
+  .el-input__prefix {
+    display: none;
+  }
+  .el-input__suffix {
+    background: url('../../assets/data/down2.png') no-repeat center;
+  }
+  .el-input__inner {
+    padding-left: 0rem;
+    padding-right: 0.25rem;
+    color: #c6cada;
+    text-align: right;
+  }
+}

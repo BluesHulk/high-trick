@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::moz-placeholder,
+:-ms-input-placeholder,
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+input:-moz-placeholder,
+textarea:-moz-placeholder,
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $--color-username !important;
+}
+
+.el-input__inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 42px;
+  border-color: $--color-pink;
+  color: $--color-dark;
+}
+
+.el-textarea__inner {
+  border-color: $--color-pink;
+  color: $--color-dark;
+}
+
+.el-input__inner,
+.el-textarea__inner {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}
+
+.el-input.is-disabled .el-input__inner,
+.el-textarea.is-disabled .el-textarea__inner {
+  background-color: #f6f8fc;
+  border-color: $--color-pink;
+  color: rgba(174, 180, 198, 1);
+}
+
+.native-input {
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid $--bg-separator;
+  box-sizing: border-box;
+  color: $--bg-principle;
+  display: inline-block;
+  font-size: inherit;
+  height: 32px;
+  line-height: 32px;
+  outline: none;
+  padding: 0 15px;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+
+  &:hover {
+    border-color: $--bg-placeholder;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $-primary-color;
+  }
+}
+
+.el-textarea__inner {
+  height: 120px;
+}

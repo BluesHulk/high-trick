@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// 分页条
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .el-pager li {
+  background-color: transparent;
+}
+
+.el-pagination.is-background .btn-prev {
+  background: $--bg-main url(../assets/button/btn-prev.png) center no-repeat;
+  .el-icon-arrow-left {
+    &:before {
+      content: '';
+    }
+  }
+}
+
+.el-pagination.is-background .btn-next {
+  background: $--bg-main url(../assets/button/btn-next.png) center no-repeat;
+  .el-icon-arrow-right {
+    &:before {
+      content: '';
+    }
+  }
+}
+
+.el-pager li {
+  font-size: 14px;
+  font-family: DINAlternate-Bold, DINAlternate;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: $-primary-color;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}

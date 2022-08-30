@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.a-menu {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &-item {
+    padding-left: 56px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    background-position: 20px center;
+    font-size: 14px;
+    font-weight: 400;
+    color: $--color-dark;
+    &:hover {
+      background-color: $--bg-hover;
+    }
+  }
+}

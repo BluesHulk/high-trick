@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.el-icon-circle-close {
+  &:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url(../assets/icon/close.png) center no-repeat;
+    -webkit-background-size: 14px;
+    background-size: 14px;
+  }
+}
+
+.el-cascader .el-input .el-icon-arrow-down,
+.el-select .el-input .el-icon-arrow-up {
+  background: url(../assets/select/select-down.png) center no-repeat;
+  &::after,
+  &::before {
+    content: '';
+  }
+}
+
+.el-input .el-input__clear,
+.el-date-editor .el-icon-circle-close,
+.el-cascader .el-input .el-icon-circle-close,
+.el-cascader .el-input .el-icon-arrow-down,
+.el-cascader .el-input .el-icon-arrow-down.is-reverse,
+.el-select .el-input .el-select__caret {
+  font-size: 16px;
+  position: relative;
+  transform: rotateZ(0deg);
+  &::before {
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    left: 5px;
+  }
+}
+
+.el-cascader.is-disabled .el-input .el-icon-circle-close,
+.el-cascader.is-disabled .el-input .el-icon-arrow-down,
+.el-cascader.is-disabled .el-input .el-icon-arrow-down.is-reverse,
+.el-select.is-disabled .el-input .el-select__caret {
+  background: url(../assets/select/select-down-disabled.png) center no-repeat;
+}
+
+// 适用于block元素
+.a-icon-eye {
+  background-image: url($--eye);
+}
+
+.a-icon-edit {
+  background-image: url($--edit);
+}
+
+.a-icon-person {
+  background-image: url($--person);
+}
+
+.a-icon-plane {
+  background-image: url($--plane);
+}
+
+.a-icon-delete {
+  background-image: url($--delete);
+}
+
+.a-icon-delete-active {
+  background-image: url($--delete-active);
+}
+
+.a-icon-eye,
+.a-icon-edit,
+.a-icon-person,
+.a-icon-plane,
+.a-icon-delete-active,
+.a-icon-delete {
+  -webkit-background-size: 16px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+}

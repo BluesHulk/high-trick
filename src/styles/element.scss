@@ -1,0 +1,256 @@
+@charset "UTF-8";
+@import './ui-theme.scss';
+// 重写样式
+
+.el-message__icon {
+  font-size: 14px;
+}
+
+// 时间选择器
+.el-date-editor .el-range-separator {
+  font-size: 12px;
+}
+
+.el-range-editor.el-input__inner {
+  padding: 0 10px;
+}
+
+//按钮
+.is-plain {
+  background: #fff !important;
+}
+
+.el-button {
+  font-weight: bold;
+}
+
+.el-button--text {
+  text-decoration-line: underline;
+  font-weight: 400;
+}
+
+.el-button--success.is-plain {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $--font-color-success;
+  }
+
+  &:focus {
+    background-color: rgba($--font-color-success, 0.2) !important;
+  }
+}
+
+.el-button--primary.is-plain {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $--font-color-brand;
+  }
+
+  &:focus {
+    background-color: rgba($--font-color-brand, 0.2) !important;
+  }
+}
+
+.el-button--info.is-plain {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $--font-color-regular;
+  }
+
+  &:focus {
+    background-color: rgba($--font-color-regular, 0.2) !important;
+  }
+}
+
+.el-button--warning.is-plain {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $--font-color-warn;
+  }
+
+  &:focus {
+    background-color: rgba($--font-color-warn, 0.2) !important;
+  }
+}
+
+.el-button--danger.is-plain {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $--font-color-danger;
+  }
+
+  &:focus {
+    background-color: rgba($--font-color-danger, 0.2) !important;
+  }
+}
+
+.el-button {
+  margin-right: 10px;
+}
+
+.el-button:last-of-type {
+  margin-right: 0;
+}
+
+.el-button + .el-button {
+  margin-left: 0;
+}
+
+// 表格
+.el-table {
+  font-size: $--font-size-xs;
+  margin-bottom: 16px;
+}
+
+.el-table th,
+.el-table td {
+  padding: 0px;
+  height: 42px;
+}
+
+.el-table thead {
+  color: $--font-color-primary;
+}
+
+.el-table--scrollable-y .el-table__body-wrapper,
+.el-table--scrollable-x .el-table__body-wrapper {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    outline-offset: -1px;
+    border-width: 1px;
+    border-style: solid;
+    outline-width: 2px;
+    outline-style: solid;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    -webkit-border-radius: 3px;
+  }
+
+  // theme
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(217, 217, 217, 1);
+    outline-color: #fff;
+    border-color: #fff;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(217, 217, 217, 0.3);
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+  }
+}
+
+// 筛选表单
+// .search-form {
+.el-form-item__label {
+  font-size: $--font-size-xs;
+  font-weight: bold;
+  color: $--font-color-primary;
+}
+
+.el-form-item {
+  margin-bottom: 11px;
+}
+
+.el-form-item__content .el-input {
+  width: 100%;
+}
+.el-form-item__content .el-select {
+  width: 100%;
+}
+.el-form-item__content .el-cascader {
+  width: 100%;
+}
+.el-form-item__content .el-radio-group {
+  width: 100%;
+}
+.el-form--inline {
+  .el-form-item:not(:last-of-type) {
+    margin-right: 24px;
+    margin-left: 0;
+  }
+
+  .el-form-item:last-of-type {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+// }
+
+// 消息确认弹框
+
+.el-message-box__status.el-icon-warning {
+  color: $-color-danger;
+}
+
+.el-notification {
+  padding: 27px 20px 27px 24px;
+
+  &__icon {
+    margin-top: -6px;
+  }
+
+  &__title {
+    font-size: $--font-size-sm;
+  }
+
+  &__group {
+    margin-left: 8px;
+  }
+}
+
+.el-notification .el-icon-warning {
+  color: $-color-danger;
+}
+
+// 表单项
+.el-form-item {
+  margin-bottom: 30px;
+}
+
+.a-date-picker {
+  .el-input__inner {
+    padding-left: 60px;
+    padding-right: 25px;
+    letter-spacing: 0;
+  }
+
+  .el-input__prefix {
+    left: 20px;
+    .el-input__icon {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../assets/button/date-picker.png) center/cover no-repeat;
+      }
+    }
+  }
+}

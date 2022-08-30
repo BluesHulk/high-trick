@@ -1,0 +1,310 @@
+/* scrollbar ------ start ------ */
+.scrollbar {
+  overflow: auto;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  outline-offset: -1px;
+  border-width: 1px;
+  border-style: solid;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.scrollbar::-webkit-scrollbar-track-piece {
+  -webkit-border-radius: 3px;
+}
+
+.scrollbar-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.scrollbar-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrollbar-light::-webkit-scrollbar-thumb {
+  background-color: rgba(243, 244, 249, 1);
+  outline-color: #fff;
+  border-color: #fff;
+}
+
+.scrollbar-light::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(217, 217, 217, 0.3);
+  background-color: #fff;
+}
+
+.scrollbar-light::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+
+/* float ------ start ------ */
+.float-container {
+  clear: both;
+  content: '';
+  display: block;
+  float: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+/* panel样式 ------ start ------ */
+.pole-panel {
+  width: 932px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.pole-panel-content {
+  position: relative;
+  height: 100%;
+}
+.pole-panel-nav {
+  height: 85px;
+}
+.pole-panel-body {
+  height: calc(100% - 170px);
+}
+.pole-panel-footer {
+  height: 44px;
+  border-top: 1px solid rgba(98, 87, 255, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 40px;
+}
+.pole-panel-tab-item {
+  float: left;
+  width: 50%;
+  height: 83px;
+  line-height: 83px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+.pole-panel-tab-item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(98, 87, 255, 0.1);
+}
+.pole-panel-active {
+  background: linear-gradient(180deg, rgba(48, 69, 177, 0) 0%, rgba(48, 69, 177, 0.06) 100%);
+}
+.pole-panel-active:after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid rgba(48, 69, 177, 1);
+}
+.pole-panel-tab-text {
+  display: inline-block;
+  min-width: 24px;
+  -webkit-background-size: 24px;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  padding-left: 38px;
+}
+.pole-panel-tab-item .device {
+  background-image: url(img/panel/device.png);
+}
+.pole-panel-active .device {
+  background-image: url(img/panel/device-active.png);
+}
+.pole-panel-tab-item .lifecycle {
+  background-image: url(img/panel/lifecycle.png);
+}
+.pole-panel-active .lifecycle {
+  background-image: url(img/panel/lifecycle-active.png);
+}
+.pole-panel-footer-inner {
+  margin-bottom: 10px;
+  height: 20px;
+}
+.pole-name {
+  height: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3045B1;
+  line-height: 20px;
+}
+.pole-lng-lat {
+  height: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3045B1;
+  line-height: 21px;
+}
+.pole-address {
+  height: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #C6CADA;
+  line-height: 21px;
+}
+.pole-img-wrapper {
+  background: url(img/panel/pole-img.png) 0 60px no-repeat;
+  -webkit-background-size: 443px 686px;
+  background-size: 443px 686px;
+  width: 443px;
+  height: 750px;
+}
+.pole-common-info {
+  width: 413px;
+  height: 625px;
+  padding-top: 125px;
+  padding-left: 53px;
+}
+.pole-device {
+  padding-left: 82px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 42px;
+  background-size: 42px;
+  background-position: 0 center;
+  margin-bottom: 60px;
+  height: 42px;
+}
+.env {
+  background-image: url(./img/panel/env.png);
+}
+.monitor {
+  background-image: url(./img/panel/monitor.png);
+}
+.guide {
+  background-image: url(./img/panel/guide.png);
+}
+.ctrl {
+  background-image: url(./img/panel/ctrl.png);
+}
+.safety {
+  background-image: url(./img/panel/safety.png);
+}
+.traffic {
+  background-image: url(./img/panel/traffic.png);
+}
+.device-info {
+  width: 265px;
+}
+.icon-right {
+  width: 56px;
+  height: 42px;
+  background: url(./img/panel/arrow-right.png) 0 center no-repeat;
+  -webkit-background-size: 16px;
+  background-size: 16px;
+}
+.device-type {
+  height: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0F1736;
+  line-height: 16px;
+  margin-bottom: 14px;
+}
+.time {
+  height: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #C6CADA;
+  line-height: 12px;
+}
+.device-status:after {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 16px;
+  -webkit-background-size: 16px;
+  background-size: 16px;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.env-status-ok:after {
+  background-image: url(./img/panel/env-status-ok.png);
+}
+.monitor-status-alarm:after {
+  background-image: url(./img/panel/monitor-status-alarm.png);
+}
+.guide-status-ok:after {
+  background-image: url(./img/panel/guide-status-ok.png);
+}
+.ctrl-status-maintain:after {
+  background-image: url(./img/panel/ctrl-status-maintain.png);
+}
+
+/* 色块 */
+.blue-cycle {
+  background-color: rgba(48, 69, 177, 1);
+}
+.alarm-cycle {
+  background-color: rgba(255, 72, 7, 1);
+}
+.successful-cycle {
+  background-color: rgba(63, 207, 118, 1);
+}
+
+
+.lifecycle-item {
+  height: 120px;
+  position: relative;
+}
+.lifecycle-item::after {
+  background: url(./img/panel/connector.png);
+  -webkit-background-size: 6px 83px;
+  background-size: 6px 83px;
+  display: block;
+  content: '';
+  width: 6px;
+  height: 83px;
+  position: absolute;
+  top: 40px;
+  left: 19px;
+}
+.lifecycle-item:last-of-type::after {
+  width: 0;
+  height: 0;
+}
+.lifecycle-icon {
+  width: 42px;
+  height: 42px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px;
+  background-size: 24px;
+  background-position: center;
+  margin-right: 40px;
+  margin-bottom: 60px;
+}
+.save-info {
+  background-image: url(./img/panel/save-info.png);
+}
+.online {
+  background-image: url(./img/panel/online.png);
+}
+.fault {
+  background-image: url(./img/panel/fault.png);
+}
+.repair {
+  background-image: url(./img/panel/repair.png);
+}
+.mb-10 {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+.el-table th > .cell {
+  font-size: 14px;
+  font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+  font-weight: 500;
+  color: #aeb4c6;
+}
+
+.cell-img-wrapper {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.el-table__body {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: rgba(239, 244, 255, 1);
+}
+
+.el-table th,
+.el-table tr {
+  background-color: transparent;
+}
+
+.el-table th.is-leaf,
+.el-table td {
+  border: none;
+}
+
+.el-table::before {
+  height: 0;
+}
+
+.el-table__body tr.current-row > td {
+  background-color: rgba(239, 244, 255, 1);
+}
+
+.el-table__header-wrapper {
+  background-color: $--bg-line-selected;
+}
+
+.el-table__header-wrapper {
+  //background-color: $--bg-main;
+}
+
+.cell {
+  color: rgba(15, 23, 54, 1);
+}
+
+.table-striped {
+  .el-table__body > td {
+    .cell {
+      height: 42px;
+    }
+  }
+
+  .el-table__body {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  .el-table__body tr:hover > td {
+    background-color: rgba(239, 244, 255, 1);
+  }
+
+  .cell {
+    color: $--color-dark;
+  }
+
+  .el-table__body tr.current-row > td {
+    background-color: transparent;
+
+    .cell {
+      height: 42px;
+      line-height: 42px;
+      width: 100% !important;
+      background-color: $-primary-color;
+      color: $--color-light;
+    }
+  }
+
+  .el-table__body tr.current-row:hover > td {
+    background-color: transparent;
+  }
+
+  .el-table__body tr:not(.current-row):not(:nth-of-type(2n)):hover > td {
+    background-color: $--bg-line-selected;
+
+    .cell {
+      width: 100% !important;
+    }
+  }
+
+  // .el-table__row:nth-of-type(2n - 1) {
+  //   .cell {
+  //     height: 42px;
+  //     line-height: 42px;
+  //     margin-top: 15px;
+  //     margin-bottom: 15px;
+  //   }
+  // }
+}

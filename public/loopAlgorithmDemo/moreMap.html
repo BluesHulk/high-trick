@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>线路计算</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.4.15&key=e0116fa3c037c63a09c23c66318e8090"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        .amap-marker-label::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -4px;
+            width: 10px;
+            height: 10px;
+            background-color: #666;
+            transform: rotate(
+                    45deg
+            );
+        }
+
+        .amap-marker-label {
+            top: -32px !important;
+            left: 36px !important;
+            border: none;
+            width: 100px;
+            height: 20px;
+            /*width: 390px;*/
+            /*height: 80px;*/
+            background-color: #666;
+            border-radius: 4px;
+            padding: 14px 20px 16px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            color: #fff;
+            max-width: 340px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .p-info {
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #8f8f8f;
+        }
+
+        .button-group-left-bottom {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 12px;
+            padding: 10px;
+        }
+
+        .button-group-right-top {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 12px;
+            padding: 10px;
+        }
+
+        .button-group-left-bottom .button,.button-group-right-top .button {
+            height: 28px;
+            line-height: 28px;
+            background-color: #0D9BF2;
+            color: #FFF;
+            border: 0;
+            outline: none;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 3px;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container"></div>
+<div class="button-group">
+    <!--    <input type="text" class="" id="lampIndex" placeholder="输入路灯编号"/>-->
+    <!--    <input type="button" class="button" value="开始报警" id="lamp" onclick="police()"/>-->
+    <input type="button" class="button" value="显示电线" onclick="showLine()"/>
+    <input type="button" class="button" value="显示路灯" onclick="showLamp()"/>
+    <input type="button" class="button" value="显示回路" onclick="showLoop()"/>
+    <br/>
+    <input type="button" class="button" value="隐藏电线" onclick="hideLine()"/>
+    <input type="button" class="button" value="隐藏路灯" onclick="hideLamp()"/>
+    <input type="button" class="button" value="隐藏回路" onclick="hideLoop()"/>
+</div>
+<div class="button-group-left-bottom">
+    回路1：<input type="button" class="button" id="loop-0" status="1" value="关" onclick="closeLoop(0)"/>
+    <br/>
+    回路2：<input type="button" class="button" id="loop-1" status="1" value="关" onclick="closeLoop(1)"/>
+</div>
+<div class="button-group-right-top">
+    回路1：<input type="button" class="button" id="loop-2" status="1" value="关" onclick="closeLoop(2)"/>
+    <br/>
+    回路2：<input type="button" class="button" id="loop-3" status="1" value="关" onclick="closeLoop(3)"/>
+</div>
+<div v-show="showPanel" class="pole-panel" id="pole-panel">
+    <div class="pole-panel-content">
+        <div class="pole-panel-header pole-panel-nav">
+            <!--<div @click="setPanelType('device')" class="pole-panel-tab-item pole-panel-active">
+                <div class="pole-panel-tab-text device">搭载设备</div>
+            </div>-->
+            <div v-for="item in navList" :key="item.type" @click="setPanelType(item)" :class="getTabItemClass(item)">
+                <div class="pole-panel-tab-text lifecycle">{{ item.text }}</div>
+            </div>
+        </div>
+        <div class="pole-panel-body scrollbar scrollbar-light float-container">
+            <div class="pole-img-wrapper fl"></div>
+            <div class="pole-common-info fr">
+                <div v-if="panelType === 'device'" class="related-devices">
+                    <div class="pole-device float-container env">
+                        <div class="device-info fl">
+                            <div class="device-type device-status env-status-ok">气象站</div>
+                            <div class="time">通讯时间：2020-10-21 19:42:56</div>
+                        </div>
+                        <div class="icon-right fr"></div>
+                    </div>
+                    <div class="pole-device float-container monitor">
+                        <div class="device-info fl">
+                            <div class="device-type device-status monitor-status-alarm">监控</div>
+                            <div class="time">通讯时间：2020-10-21 19:42:56</div>
+                        </div>
+                        <div class="icon-right fr"></div>
+                    </div>
+                    <div class="pole-device float-container guide">
+                        <div class="device-info fl">
+                            <div class="device-type device-status guide-status-ok">指示牌</div>
+                            <div class="time">通讯时间：--</div>
+                        </div>
+                        <div class="icon-right fr"></div>
+                    </div>
+                    <div class="pole-device float-container ctrl">
+                        <div class="device-info fl">
+                            <div class="device-type device-status ctrl-status-maintain">单灯控制器</div>
+                            <div class="time">通讯时间：2020-10-21 19:42:56</div>
+                        </div>
+                        <div class="icon-right fr"></div>
+                    </div>
+                    <div class="pole-device float-container safety">
+                        <div class="device-info fl">
+                            <div class="device-type device-status safety-status-ok">安防</div>
+                            <div class="time"></div>
+                        </div>
+                        <div class="icon-right fr"></div>
+                    </div>
+                    <div class="pole-device float-container traffic">
+                        <div class="device-info fl">
+                            <div class="device-type device-status traffic-status-ok">交通</div>
+                            <div class="time">12个月后到期</div>
+                        </div>
+                        <div class="icon-right fr"></div>
+                    </div>
+                </div>
+                <div v-else class="pole-lifecycle">
+                    <div class="lifecycle-item">
+                        <div class="float-container">
+                            <div class="lifecycle-icon fl save-info blue-cycle"></div>
+                            <div class="device-info fl">
+                                <div class="time mb-10">2020.10.13 09:30:53</div>
+                                <div class="device-type">设备信息录入系统</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lifecycle-item">
+                        <div class="float-container">
+                            <div class="lifecycle-icon fl online blue-cycle"></div>
+                            <div class="device-info fl">
+                                <div class="time mb-10">2020.10.13 09:30:53</div>
+                                <div class="device-type">设备第一次上线</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lifecycle-item">
+                        <div class="float-container">
+                            <div class="lifecycle-icon fl fault alarm-cycle"></div>
+                            <div class="device-info fl">
+                                <div class="time mb-10">2020.10.13 09:30:53</div>
+                                <div class="device-type">设备故障</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lifecycle-item">
+                        <div class="float-container">
+                            <div class="lifecycle-icon fl repair successful-cycle"></div>
+                            <div class="device-info fl">
+                                <div class="time mb-10">2020.10.13 09:30:53</div>
+                                <div class="device-type">故障修复</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pole-panel-footer">
+            <div class="pole-panel-footer-inner float-container">
+                <div class="pole-name fl">江南大道002</div>
+                <div class="pole-lng-lat fr">（经度120.123231/纬度30.123334）</div>
+            </div>
+            <div class="pole-address">浙江省杭州市滨江区江南大道</div>
+        </div>
+    </div>
+</div>
+<script src="./vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#pole-panel',
+        data: {
+            navList: [
+                {type: 'device', text: '搭载设备', active: true},
+                {type: 'lifecycle', text: '生命周期', active: false}
+            ],
+            showPanel: false,
+            panelType: 'device', // device/lifecycle
+        },
+        methods: {
+            getTabItemClass(item) {
+                const def = [`pole-panel-tab-item`];
+                if (item.active) def.push(`pole-panel-active`);
+                return def;
+            },
+            setPanelType(item) {
+                this.panelType = item.type;
+                item.active = !item.active;
+                for (let i = 0; i < this.navList.length; i++) {
+                    let nav = this.navList[i];
+                    nav.active = item.type === nav.type
+                }
+            }
+        }
+    });
+</script>
+<script>
+    //加载地图
+    let map = new AMap.Map("container", {
+        resizeEnable: true,
+        center: [102.511968, 25.224577],
+        zoom: 18,
+        mapStyle: "amap://styles/whitesmoke",
+        expandZoomRange: true,
+        zooms: [12, 20]
+    });
+    map.on("complete", completeEventHandler);
+
+    //存储线路点
+    let linePointList = [];
+    //存储路灯点
+    let lampPointList = [];
+    //存储回路线路段
+    let lineLoopList = [];
+    //存储电线
+    let lineList = [];
+    //添加线路点
+    let lineIndex = 0;
+    //添加路灯点
+    let lampIndex = 0;
+    let markerInfo = new AMap.Marker({
+        content: ' ',
+        offset: new AMap.Pixel(-10, -20)
+    });
+    markerInfo.hide();
+    markerInfo.setMap(map);
+
+    function showPolePanel(index) {
+        // this.index
+        vm.showPanel = tempList.includes(parseInt(index, 10));
+    }
+
+    function completeEventHandler() {
+        // 绘制路灯
+        for (let k in lampCollection) {
+            let tempLampPointList = [];
+            lampIndex = 0;
+            lampMarker = lampCollection[k];
+            for (let i in lampMarker) {
+                let icon = normalIcon;
+                let pixel = new AMap.Pixel(-28, -28);
+                tempList.forEach(function (e) {
+                    if (e == i) {
+                        icon = multipleNormalIcon;
+                        pixel = new AMap.Pixel(-36, -36);
+                    }
+                });
+
+                marker = new AMap.Marker({
+                    position: new AMap.LngLat(lampMarker[i]['x'], lampMarker[i]['y']),
+                    offset: pixel,
+                    icon: icon
+                }).on("click", function (e) {
+                    if (this.line == 2 || this.line == 3) {
+                        //第3,4条路线只变灯
+                        policeLamp(this.line, this.index);
+                    } else {
+                        police(this.line, this.index);
+                    }
+                    showPolePanel(this.index);
+                }, {line: k, index: i})/*.on("mouseover", function (e) {
+                    markerInfo.show();
+                    markerInfo.setPosition(this.getPosition());
+                    markerInfo.setLabel({
+                        content:
+                            '<p class="p-info">江辉路001号综合灯</p>' +
+                            '<p style="margin:.5rem 0;"><span>类型：</span>智能照明设备</p>' +
+                            '<p><span>地址：</span>浙江省杭州市滨江区江辉路</p>'
+                    });
+                }).on("mouseout", function (e) {
+                    markerInfo.hide();
+                })*/;
+                marker.setExtData({status: true});
+                marker.setExtData(Object.assign({}, marker.getExtData(), {status: true}));
+                marker.setMap(map);
+                tempLampPointList.push(marker);
+            }
+            lampPointList.push(tempLampPointList);
+        }
+
+
+        // 绘制电线
+        for (let k in lineCollection) {
+            lineMarker = lineCollection[k];
+            linePointList = [];
+            for (let i in lineMarker) {
+                linePointList.push([lineMarker[i]['x'], lineMarker[i]['y']]);
+            }
+
+            let pLine = new AMap.Polyline({
+                map: map,
+                path: linePointList,
+                strokeColor: lineColor,  //线颜色
+                strokeOpacity: 1,     //线透明度
+                strokeWeight: 2,      //线宽
+                strokeStyle: "dashed"  //线样式
+            });
+            map.add(pLine);
+            lineList.push(pLine);
+        }
+
+        //绘制回路
+        for (let k in pathCollection) {
+            let tempLineLoopList = [];
+            lineArr = pathCollection[k];
+            // 绘制回路(便于故障变色，就一段段绘制)
+            for (let i = 0; i < lineArr.length - 1; i++) {
+                let polyLine = new AMap.Polyline({
+                    path: [lineArr[i], lineArr[i + 1]],
+                    strokeColor: loopLineColor,  //线颜色
+                    strokeOpacity: 1,     //线透明度
+                    strokeWeight: 2,      //线宽
+                    strokeStyle: "solid",  //线样式
+                });
+                map.add(polyLine);
+                tempLineLoopList.push(polyLine);
+            }
+            lineLoopList.push(tempLineLoopList);
+        }
+        tempPointAndLine();
+
+        hideLine();
+    }
+
+    function showLine() {
+        for (let i in lineList) {
+            lineList[i].show();
+        }
+    }
+
+    function hideLine() {
+        for (let i in lineList) {
+            lineList[i].hide();
+        }
+    }
+
+    function showLamp() {
+        for (let i in lampPointList) {
+            for (let j in lampPointList[i]) {
+                lampPointList[i][j].show();
+            }
+        }
+    }
+
+    function hideLamp() {
+        for (let i in lampPointList) {
+            for (let j in lampPointList[i]) {
+                lampPointList[i][j].hide();
+            }
+        }
+    }
+
+    function showLoop() {
+        for (let i in lineLoopList) {
+            for (let j in lineLoopList[i]) {
+                lineLoopList[i][j].show();
+            }
+        }
+    }
+
+    function hideLoop() {
+        for (let i in lineLoopList) {
+            for (let j in lineLoopList[i]) {
+                lineLoopList[i][j].hide();
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

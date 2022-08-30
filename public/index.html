@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff; X-XSS-Protection: 1;mode=block" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <title></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We"re sorry but <%= htmlWebpackPlugin.options.title %> doesn"t work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script type=text/javascript src="http://webapi.amap.com/maps?v=1.4.7&key=711459d785193440f6f7674aa3bc69b0&plugin=Map3D,AMap.DistrictLayer,AMap.Scale,AMap.ToolBar"></script>
+    <script src=//webapi.amap.com/ui/1.0/main.js></script>
+    <!-- built files will be auto injected -->
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript">
+      try {
+        if (!localStorage.getItem("Ip")) {
+          var Ip = returnCitySN["cip"];
+          localStorage.setItem("Ip", Ip)
+        }
+      } catch(err) {
+        console.log(err);
+      }
+    </script>
+  </body>
+</html>

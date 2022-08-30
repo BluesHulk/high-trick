@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.el-form {
+  width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+  .el-form-item {
+    .form-label {
+      height: 14px;
+      line-height: 14px;
+      margin-bottom: 9px;
+      .form-label-text {
+        font-size: 14px;
+        font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+        font-weight: 500;
+        color: $--color-form-label;
+        margin-bottom: 10px;
+        position: relative;
+      }
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .el-checkbox {
+    margin-right: 20px;
+  }
+}
+
+.editable-form {
+  .form-item-required {
+    &:after {
+      content: '';
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAMFBMVEUAAAD/RgD/SQD/SAf/RgX/Rwf/SQf/SAf/SAb/Rwb/SAf/SAf/SAf/SAf/SAf/SAeg2L5TAAAAEHRSTlMACxUnN2xtcX+EjY6Rter7+DnLSwAAADpJREFUCNdjYMAL2BKgDI4GMMVyiKNBxwHIYNxXOf21AEiI+f5fAwZkBuO6yumvBJAVw7UDDQzAbyEAMSoO4kEMo7wAAAAASUVORK5CYII=)
+        center no-repeat;
+      display: inline-block;
+      width: 16px;
+      height: 19px;
+      position: absolute;
+      left: 100%;
+      transform: translateY(-3px);
+    }
+  }
+}

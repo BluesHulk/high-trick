@@ -1,0 +1,140 @@
+@import '@/styles/ui-theme';
+
+.el-input__inner {
+  letter-spacing: 1px;
+}
+
+.order-content {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 20px;
+  .el-input,
+  .el-select {
+    width: 260px;
+  }
+}
+
+.order-wrapper {
+  position: relative;
+  .fix-report {
+    cursor: pointer;
+    position: fixed;
+    right: 0px;
+    bottom: 180px;
+    width: 154px;
+    height: 54px;
+    line-height: 54px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7e58 0%, #ff4807 100%);
+    box-shadow: 0px 10px 20px -4px rgba(255, 82, 22, 0.3);
+    border-radius: 100px 0px 0px 100px;
+    img {
+      margin-top: 5px;
+      float: left;
+    }
+    span {
+      float: left;
+      margin-left: 10px;
+      font-size: 18px;
+      font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+      font-weight: 500;
+      color: #ffffff;
+    }
+  }
+  .split-line {
+    background-color: $-primary-color;
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    margin-right: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .el-form-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .el-input__inner {
+    font-size: 14px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(68, 79, 132, 0.3);
+    line-height: 22px;
+    color: #c6cada;
+  }
+  .time-wrapper {
+    width: 560px;
+    .time {
+      display: inline-block;
+      width: 260px;
+      position: relative;
+    }
+    .time:nth-last-of-type(1) {
+      margin-left: 40px;
+    }
+  }
+  .search-button {
+    width: 42px;
+    height: 42px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: url(../../../../assets/button/search-btn.png) center no-repeat;
+    -webkit-background-size: 42px;
+    background-size: 42px;
+    border-radius: 4px;
+    position: absolute;
+    top: 2px;
+  }
+  .reload-button {
+    width: 42px;
+    height: 42px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: url(../../../../assets/button/reload.png) center no-repeat;
+    -webkit-background-size: 22px;
+    background-size: 22px;
+    border-radius: 4px;
+    position: absolute;
+    top: 2px;
+    left: 50px;
+    background-color: #3045b1;
+  }
+  .idoot {
+    width: 42px;
+    height: 42px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: url(../../../../assets/button/idoot.png) center no-repeat;
+    -webkit-background-size: 22px;
+    background-size: 22px;
+    border: none;
+  }
+  .success {
+    color: $--color-dark;
+  }
+  .fail {
+    color: $--color-danger;
+  }
+  // .el-table__row:nth-of-type(2n - 1) {
+  //   height: 74px;
+  // }
+  .el-table__body {
+    border-collapse: separate;
+    border-spacing: 0 16px;
+  }
+  .el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: #eff4ff;
+  }
+  .el-table__row:nth-of-type(2n) {
+    background-color: $--bg-main;
+  }
+}

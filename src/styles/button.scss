@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+// 操作列按钮
+.cell-buttons {
+  .cell-btn {
+    cursor: pointer;
+  }
+
+  .cell-btn + .cell-btn {
+    margin-left: 20px;
+  }
+
+  .cell-text {
+    margin-right: 8px;
+  }
+
+  .el-radio {
+    margin-right: 16px;
+  }
+
+  .cell-btn-disabled {
+    color: $--font-color-secondary;
+    cursor: default;
+  }
+}
+
+// 表单有多行，按钮放在右下角
+.rb-buttons {
+  position: relative;
+
+  > .el-form-item:last-of-type {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

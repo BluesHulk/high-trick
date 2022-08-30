@@ -1,0 +1,31 @@
+let FormItem;
+(function(FormItem) {
+  FormItem[(FormItem['Readable'] = 0)] = 'Readable';
+  FormItem[(FormItem['Input'] = 1)] = 'Text';
+  FormItem[(FormItem['Select'] = 2)] = 'Select';
+  FormItem[(FormItem['Date'] = 3)] = 'Date';
+  FormItem[(FormItem['Time'] = 4)] = 'Time';
+  FormItem[(FormItem['Switch'] = 5)] = 'Switch';
+  FormItem[(FormItem['CheckboxGroup'] = 6)] = 'CheckboxGroup';
+  FormItem[(FormItem['RadioGroup'] = 7)] = 'RadioGroup';
+  FormItem[(FormItem['Checkbox'] = 8)] = 'Checkbox';
+  FormItem[(FormItem['Radio'] = 9)] = 'Radio';
+  FormItem[(FormItem['InputNumber'] = 10)] = 'InputNumber';
+  FormItem[(FormItem['Cascader'] = 11)] = 'Cascader';
+  FormItem[(FormItem['Slider'] = 12)] = 'Slider';
+  FormItem[(FormItem['ColorPicker'] = 13)] = 'ColorPicker';
+  FormItem[(FormItem['Transfer'] = 14)] = 'Transfer';
+  FormItem[(FormItem['Textarea'] = 15)] = 'Textarea';
+  FormItem[(FormItem['Year'] = 16)] = 'Year';
+  FormItem[(FormItem['Month'] = 17)] = 'Month';
+  FormItem[(FormItem['Dates'] = 18)] = 'Dates';
+  FormItem[(FormItem['Week'] = 19)] = 'Week';
+  FormItem[(FormItem['Datetime'] = 20)] = 'Datetime';
+  FormItem[(FormItem['Datetimerange'] = 21)] = 'Datetimerange';
+  FormItem[(FormItem['Daterange'] = 22)] = 'Daterange';
+  FormItem[(FormItem['Monthrange'] = 23)] = 'Monthrange';
+  FormItem[(FormItem['SliderInput'] = 24)] = 'SliderInput';
+  FormItem[(FormItem['Button'] = 25)] = 'Button';
+})(FormItem || (FormItem = {}));
+
+export default FormItem;

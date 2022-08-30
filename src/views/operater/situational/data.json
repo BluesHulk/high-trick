@@ -1,0 +1,817 @@
+{
+	"personList": [
+		{
+			"id": 1,
+			"lnglat": [
+				120.18186,
+				30.185361
+			],
+			"type": 1,
+			"typeName": "巡检人员",
+			"url": "person1-1.jpg",
+			"deg": 0
+		},
+		{
+			"id": 2,
+			"lnglat": [
+				120.193285,
+				30.178802
+			],
+			"type": 1,
+			"typeName": "巡检人员",
+			"url": "person2-1.jpg",
+			"deg": 40
+		},
+		{
+			"id": 3,
+			"lnglat": [
+				120.201096,
+				30.189709
+			],
+			"type": 1,
+			"typeName": "巡检人员",
+			"url": "person3-1.jpg",
+			"deg": 80
+		},
+		{
+			"id": 4,
+			"lnglat": [
+				120.170025,
+				30.181473
+			],
+			"type": 2,
+			"typeName": "维修人员",
+			"url": "person1-2.jpg",
+			"deg": 180
+		},
+		{
+			"id": 5,
+			"lnglat": [
+				120.203499,
+				30.184144
+			],
+			"type": 2,
+			"typeName": "维修人员",
+			"url": "person2-2.jpg",
+			"deg": 40
+		},
+		{
+			"id": 6,
+			"lnglat": [
+				120.199036,
+				30.183625
+			],
+			"type": 3,
+			"typeName": "访客",
+			"url": "person1-3.jpg",
+			"deg": 210
+		},
+		{
+			"id": 7,
+			"lnglat": [
+				120.245814,
+				30.180583
+			],
+			"type": 3,
+			"typeName": "访客",
+			"url": "person2-3.jpg",
+			"deg": 290
+		},
+		{
+			"id": 8,
+			"lnglat": [
+				120.238003,
+				30.198092
+			],
+			"type": 3,
+			"typeName": "访客",
+			"url": "person3-3.jpg",
+			"deg": 320
+		},
+		{
+			"id": 9,
+			"lnglat": [
+				120.247959,
+				30.177912
+			],
+			"type": 3,
+			"typeName": "访客",
+			"url": "person4-3.jpg",
+			"deg": 60
+		},
+		{
+			"id": 10,
+			"lnglat": [
+				120.219893,
+				30.17116
+			],
+			"type": 3,
+			"typeName": "访客",
+			"url": "person5-3.jpg",
+			"deg": 30
+		},
+		{
+			"id": 11,
+			"lnglat": [
+				120.188908,
+				30.189783
+			],
+			"type": 4,
+			"typeName": "员工",
+			"url": "person1-4.jpg",
+			"deg": 90
+		},
+		{
+			"id": 12,
+			"lnglat": [
+				120.19483,
+				30.187557
+			],
+			"type": 4,
+			"typeName": "员工",
+			"url": "person2-4.jpg",
+			"deg": 340
+		},
+		{
+			"id": 13,
+			"lnglat": [
+				120.201182,
+				30.185628
+			],
+			"type": 4,
+			"typeName": "员工",
+			"url": "person3-4.jpg",
+			"deg": 220
+		},
+		{
+			"id": 14,
+			"lnglat": [
+				120.176291,
+				30.171605
+			],
+			"type": 4,
+			"typeName": "员工",
+			"url": "person4-4.jpg",
+			"deg": 80
+		},
+		{
+			"id": 15,
+			"lnglat": [
+				120.187792,
+				30.181622
+			],
+			"type": 4,
+			"typeName": "员工",
+			"url": "person5-4.jpg",
+			"deg": 210
+		},
+		{
+			"id": 16,
+			"lnglat": [
+				120.194916,
+				30.165891
+			],
+			"type": 4,
+			"typeName": "员工",
+			"url": "person6-4.jpg",
+			"deg": 0
+		},
+		{
+			"id": 17,
+			"lnglat": [
+				120.264868,
+				30.168266
+			],
+			"type": 4,
+			"typeName": "员工",
+			"url": "person7-4.jpg",
+			"deg": 0
+		}
+	],
+	"deviceList": [
+		{
+			"id": 1101,
+			"name": "江虹路001号监控",
+			"lnglat": [
+				120.202715,
+				30.191535
+			],
+			"type": 1,
+			"status": 1,
+			"style": 0,
+			"typeName": "海康摄像头",
+			"installAddress": "浙江省杭州市滨江区江虹路"
+		},
+		{
+			"id": 1102,
+			"name": "江虹路002号监控",
+			"lnglat": [
+				120.202693,
+				30.189216
+			],
+			"type": 1,
+			"status": 2,
+			"style": 1,
+			"typeName": "海康摄像头",
+			"installAddress": "浙江省杭州市滨江区江虹路"
+		},
+		{
+			"id": 1103,
+			"name": "江虹路001号灯杆",
+			"lnglat": [
+				120.202641,
+				30.196534
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区江虹路"
+		},
+		{
+			"id": 1104,
+			"name": "江虹路002号灯杆",
+			"lnglat": [
+				120.202844,
+				30.186824
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区江虹路"
+		},
+		{
+			"id": 1105,
+			"name": "江虹路003号灯杆",
+			"lnglat": [
+				120.203101,
+				30.181778
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区江虹路"
+		},
+		{
+			"id": 2201,
+			"name": "江辉路001号监控",
+			"lnglat": [
+				120.210064,
+				30.198601
+			],
+			"type": 1,
+			"status": 1,
+			"style": 0,
+			"typeName": "海康摄像头",
+			"installAddress": "浙江省杭州市滨江区江辉路"
+		},
+		{
+			"id": 2202,
+			"name": "江辉路001号单灯",
+			"lnglat": [
+				120.210579,
+				30.196153
+			],
+			"type": 7,
+			"status": 1,
+			"style": 30,
+			"typeName": "鸣志智能照明设备",
+			"installAddress": "浙江省杭州市滨江区江辉路"
+		},
+		{
+			"id": 2203,
+			"name": "江辉路002号单灯",
+			"lnglat": [
+				120.21045,
+				30.191813
+			],
+			"type": 7,
+			"status": 5,
+			"style": 34,
+			"typeName": "鸣志智能照明设备",
+			"installAddress": "浙江省杭州市滨江区江辉路"
+		},
+		{
+			"id": 2204,
+			"name": "江辉路003号单灯",
+			"lnglat": [
+				120.211008,
+				30.189216
+			],
+			"type": 7,
+			"status": 1,
+			"style": 30,
+			"typeName": "鸣志智能照明设备",
+			"installAddress": "浙江省杭州市滨江区江辉路"
+		},
+		{
+			"id": 2205,
+			"name": "江辉路001号音箱",
+			"lnglat": [
+				120.21118,
+				30.183429
+			],
+			"type": 2,
+			"status": 1,
+			"style": 5,
+			"typeName": "数字音箱",
+			"installAddress": "浙江省杭州市滨江区江辉路"
+		},
+		{
+			"id": 2206,
+			"name": "江辉路001号显示屏",
+			"lnglat": [
+				120.210365,
+				30.180832
+			],
+			"type": 5,
+			"status": 1,
+			"style": 20,
+			"typeName": "诺瓦显示屏",
+			"installAddress": "浙江省杭州市滨江区江辉路"
+		},
+		{
+			"id": 3301,
+			"name": "互灵智能灯杆设备001号",
+			"lnglat": [
+				120.15945,
+				30.182268
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3302,
+			"name": "互灵智能灯杆设备005号",
+			"lnglat": [
+				120.150009,
+				30.184865
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3303,
+			"name": "鸣志智能照明设备001号",
+			"lnglat": [
+				120.151039,
+				30.184272
+			],
+			"type": 7,
+			"status": 1,
+			"style": 30,
+			"typeName": "鸣志智能照明设备",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3304,
+			"name": "鸣志智能照明设备002号",
+			"lnglat": [
+				120.152412,
+				30.183456
+			],
+			"type": 7,
+			"status": 4,
+			"style": 33,
+			"typeName": "鸣志智能照明设备",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3305,
+			"name": "鸣志智能照明设备003号",
+			"lnglat": [
+				120.154558,
+				30.182639
+			],
+			"type": 7,
+			"status": 1,
+			"style": 30,
+			"typeName": "鸣志智能照明设备",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3306,
+			"name": "数字音箱001号",
+			"lnglat": [
+				120.156704,
+				30.182046
+			],
+			"type": 2,
+			"status": 1,
+			"style": 5,
+			"typeName": "数字音箱",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3307,
+			"name": "数字音箱002号",
+			"lnglat": [
+				120.159107,
+				30.181823
+			],
+			"type": 2,
+			"status": 4,
+			"style": 8,
+			"typeName": "数字音箱",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3308,
+			"name": "数字广播设备001号",
+			"lnglat": [
+				120.160395,
+				30.182046
+			],
+			"type": 8,
+			"status": 1,
+			"style": 35,
+			"typeName": "数字广播设备",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3309,
+			"name": "一键呼叫001号",
+			"lnglat": [
+				120.16194,
+				30.182565
+			],
+			"type": 3,
+			"status": 1,
+			"style": 10,
+			"typeName": "一键呼叫",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3310,
+			"name": "一键呼叫002号",
+			"lnglat": [
+				120.163141,
+				30.18301
+			],
+			"type": 3,
+			"status": 1,
+			"style": 10,
+			"typeName": "一键呼叫",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3311,
+			"name": "诺瓦显示屏001号",
+			"lnglat": [
+				120.164343,
+				30.183678
+			],
+			"type": 5,
+			"status": 1,
+			"style": 20,
+			"typeName": "诺瓦显示屏",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3312,
+			"name": "诺瓦显示屏002号",
+			"lnglat": [
+				120.165201,
+				30.184568
+			],
+			"type": 5,
+			"status": 1,
+			"style": 20,
+			"typeName": "诺瓦显示屏",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3313,
+			"name": "诺瓦显示屏003号",
+			"lnglat": [
+				120.166574,
+				30.185162
+			],
+			"type": 5,
+			"status": 1,
+			"style": 20,
+			"typeName": "诺瓦显示屏",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3314,
+			"name": "互灵监控器设备001号",
+			"lnglat": [
+				120.168291,
+				30.185533
+			],
+			"type": 6,
+			"status": 3,
+			"style": 27,
+			"typeName": "互灵监控器设备",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3315,
+			"name": "DS-8664N-l16",
+			"lnglat": [
+				120.170437,
+				30.186201
+			],
+			"type": 18,
+			"status": 1,
+			"style": 85,
+			"typeName": "录像机设备",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3316,
+			"name": "海康摄像头001号",
+			"lnglat": [
+				120.172239,
+				30.186868
+			],
+			"type": 1,
+			"status": 4,
+			"style": 3,
+			"typeName": "海康摄像头",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 3317,
+			"name": "海康摄像头002号",
+			"lnglat": [
+				120.173269,
+				30.187388
+			],
+			"type": 1,
+			"status": 1,
+			"style": 0,
+			"typeName": "海康摄像头",
+			"installAddress": "浙江省杭州市滨江区江南大道"
+		},
+		{
+			"id": 4401,
+			"name": "时代大道001号灯杆",
+			"lnglat": [
+				120.187131,
+				30.192525
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4402,
+			"name": "时代大道002号灯杆",
+			"lnglat": [
+				120.187474,
+				30.191487
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4403,
+			"name": "时代大道003号灯杆",
+			"lnglat": [
+				120.187689,
+				30.190448
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4404,
+			"name": "时代大道004号灯杆",
+			"lnglat": [
+				120.187775,
+				30.189595
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4405,
+			"name": "时代大道005号灯杆",
+			"lnglat": [
+				120.187989,
+				30.188667
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4406,
+			"name": "时代大道006号灯杆",
+			"lnglat": [
+				120.188204,
+				30.187629
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4407,
+			"name": "时代大道007号灯杆",
+			"lnglat": [
+				120.18829,
+				30.186034
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4408,
+			"name": "时代大道008号灯杆",
+			"lnglat": [
+				120.188418,
+				30.184958
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4409,
+			"name": "时代大道009号灯杆",
+			"lnglat": [
+				120.188204,
+				30.183882
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4410,
+			"name": "时代大道010号灯杆",
+			"lnglat": [
+				120.188118,
+				30.18251
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4411,
+			"name": "时代大道011号灯杆",
+			"lnglat": [
+				120.188333,
+				30.181508
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4412,
+			"name": "时代大道012号灯杆",
+			"lnglat": [
+				120.188333,
+				30.18084
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4413,
+			"name": "时代大道013号灯杆",
+			"lnglat": [
+				120.188247,
+				30.179987
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4414,
+			"name": "时代大道014号灯杆",
+			"lnglat": [
+				120.188247,
+				30.178911
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4415,
+			"name": "时代大道015号灯杆",
+			"lnglat": [
+				120.188161,
+				30.177946
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4416,
+			"name": "时代大道016号灯杆",
+			"lnglat": [
+				120.188075,
+				30.176871
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4417,
+			"name": "时代大道017号灯杆",
+			"lnglat": [
+				120.188161,
+				30.176054
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4418,
+			"name": "时代大道018号灯杆",
+			"lnglat": [
+				120.187903,
+				30.17509
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4419,
+			"name": "时代大道019号灯杆",
+			"lnglat": [
+				120.187603,
+				30.174236
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		},
+		{
+			"id": 4420,
+			"name": "时代大道020号灯杆",
+			"lnglat": [
+				120.187431,
+				30.173828
+			],
+			"type": 13,
+			"status": 1,
+			"style": 60,
+			"typeName": "互灵智能灯杆设备",
+			"installAddress": "浙江省杭州市滨江区时代大道"
+		}
+	]
+}

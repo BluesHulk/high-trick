@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.primary-underline {
+  color: $-primary-color;
+  text-decoration: underline;
+}
+
+.delete-underline {
+  color: $--color-danger;
+  text-decoration: underline;
+}
+
+.show-dot {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 文字对齐方式
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-justify-all {
+  text-align: justify-all;
+}
+
+.font-color-primary {
+  color: $-primary-color;
+}
+
+.font-color-success {
+  color: $-color-success;
+}
+
+.font-color-warning {
+  color: $-color-warning;
+}
+
+.font-color-danger {
+  color: $-color-danger;
+}

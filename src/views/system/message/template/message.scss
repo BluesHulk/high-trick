@@ -1,0 +1,22 @@
+.message-template-form {
+  width: 670px;
+  margin: 0 auto;
+  .message-template-form-item {
+    width: 670px;
+    .message-template-form-label {
+      height: 14px;
+      font-size: 14px;
+      font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+      font-weight: 500;
+      color: $--color-form-label;
+      line-height: 14px;
+      margin-bottom: 10px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .el-checkbox {
+    margin-right: 20px;
+  }
+}
